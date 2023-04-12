@@ -6,6 +6,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 import joblib
 import streamlit as st
 
+
 def leer_dato(uploaded_file):
     dato = pickle.loads(uploaded_file.getvalue())
     dato = dato.reshape(dato.shape[0]* dato.shape[1])  
