@@ -22,7 +22,6 @@ st.title("Detección de numeros con mnist")
 c29, c30, c31 = st.columns([1, 6, 1]) # 3 columnas: 10%, 60%, 10%
 
 with c30:
-    # uploaded_file = st.file_uploader("", type = 'pkl',key="1",)
     uploaded_file = st.file_uploader("Cargar imagen", type=["jpg", "jpeg", "png"])
 
     if uploaded_file is not None:        
