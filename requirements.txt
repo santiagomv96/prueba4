@@ -4,5 +4,4 @@ tensorflow
 scikit-learn
 joblib
 Pillow
-streamlit_drawable_canvas
 scikit-image
