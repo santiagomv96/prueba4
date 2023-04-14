@@ -69,28 +69,28 @@ if prediccion is not None:
 
 
 
-st.write("proyecto para streamlit premium")
-canvas_result = st_canvas(
-    fill_color="#FFF",
-    stroke_width=10,
-    stroke_color="#000",
-    background_color="#FFF",
-    height=150,
-    width=150,
-    drawing_mode="freedraw",
-    key="canvas",
-)
+# st.write("proyecto para streamlit premium")
+# canvas_result = st_canvas(
+#     fill_color="#FFF",
+#     stroke_width=10,
+#     stroke_color="#000",
+#     background_color="#FFF",
+#     height=150,
+#     width=150,
+#     drawing_mode="freedraw",
+#     key="canvas",
+# )
 
-# Obtener el resultado del widget de dibujo
-if canvas_result.image_data is not None:
+# # Obtener el resultado del widget de dibujo
+# if canvas_result.image_data is not None:
     
-    img1=resize(canvas_result.image_data,(28,28))
-    st.write((img1).shape)
-    # # img = img.resize((28, 28))
-    # img = ImageOps.invert(img)
-    img = np.array(img1[:,:,0:1]) / 255.0
-    img = img.reshape(1, 784)
+#     img1=resize(canvas_result.image_data,(28,28))
+#     st.write((img1).shape)
+#     # # img = img.resize((28, 28))
+#     # img = ImageOps.invert(img)
+#     img = np.array(img1[:,:,0:1]) / 255.0
+#     img = img.reshape(1, 784)
 
-    prediccion=predecir(joblib.load("modelo_entrenado.pkl"),(img))
-    st.image(np.array(img1[:,:,0:1]) , caption=prediccion[0])
+#     prediccion=predecir(joblib.load("modelo_entrenado.pkl"),(img))
+#     st.image(np.array(img1[:,:,0:1]) , caption=prediccion[0])
 st.stop()
